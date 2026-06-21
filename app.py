@@ -220,15 +220,17 @@ def add_department():
         conn = get_connection()
         cursor = conn.cursor()
 
+        name = request.form["department_name"]
+
         cursor.execute(
             "INSERT INTO Departments(department_name) VALUES (?)",
-            (request.form["department_name"],)
+            (name,)
         )
 
         conn.commit()
         conn.close()
 
-        return "Department Added Successfully"
+        return "OK - Department Added"
 
     return render_template("add_department.html")
 # ==========================
