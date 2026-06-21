@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Structures</title>
+</head>
+<body>
+
+<h2>Salary Structure List</h2>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Employee ID</th>
+    <th>Basic Salary</th>
+    <th>House</th>
+    <th>Medical</th>
+    <th>Transport</th>
+    <th>Tax</th>
+    <th>Loan</th>
+    <th>Other</th>
+</tr>
+
+{% for row in records %}
+<tr>
+    {% for item in row %}
+    <td>{{ item }}</td>
+    {% endfor %}
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

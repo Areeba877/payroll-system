@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payslip</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <h2 class="text-center text-success">
+        Employee Payslip
+    </h2>
+
+    <table class="table table-bordered mt-4">
+
+        <tr>
+            <th>Employee ID</th>
+            <td>{{ record[0] }}</td>
+        </tr>
+
+        <tr>
+            <th>Gross Salary</th>
+            <td>{{ gross_salary }}</td>
+        </tr>
+
+        <tr>
+            <th>Total Deductions</th>
+            <td>{{ deductions }}</td>
+        </tr>
+
+        <tr>
+            <th>Net Salary</th>
+            <td>{{ net_salary }}</td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>

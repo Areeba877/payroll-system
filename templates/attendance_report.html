@@ -1,0 +1,16 @@
+@app.route("/attendance_report")
+def attendance_report():
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM Attendance")
+
+    records = cursor.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "attendance_report.html",
+        records=records
+    )

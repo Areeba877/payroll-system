@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">Department List</h2>
+
+    <table class="table table-bordered table-striped">
+
+        <tr>
+            <th>ID</th>
+            <th>Department Name</th>
+        </tr>
+
+        {% for department in departments %}
+        <tr>
+            {% for item in department %}
+            <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>
