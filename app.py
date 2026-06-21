@@ -217,7 +217,6 @@ def employee_list():
 def add_department():
 
     if request.method == "POST":
-
         conn = get_connection()
         cursor = conn.cursor()
 
@@ -232,8 +231,6 @@ def add_department():
         return "Department Added Successfully"
 
     return render_template("add_department.html")
-
-
 # ==========================
 # Department List
 # ==========================
