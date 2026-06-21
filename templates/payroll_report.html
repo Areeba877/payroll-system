@@ -25,20 +25,20 @@
                     <tr>
                         <th>Employee ID</th>
                         <th>Basic Salary</th>
-                        <th>House Allowance</th>
-                        <th>Medical Allowance</th>
-                        <th>Transport Allowance</th>
+                        <th>Gross Salary</th>
+                        <th>Total Deductions</th>
+                        <th>Net Salary</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     {% for row in records %}
                     <tr>
+                        <td>{{ row[0] }}</td>
                         <td>{{ row[1] }}</td>
                         <td>{{ row[2] }}</td>
                         <td>{{ row[3] }}</td>
                         <td>{{ row[4] }}</td>
-                        <td>{{ row[5] }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>

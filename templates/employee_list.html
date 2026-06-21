@@ -18,6 +18,17 @@
 
         <div class="card-body">
 
+            <form method="GET" action="/employees" class="mb-3">
+                <input type="text"
+                       name="search"
+                       class="form-control"
+                       placeholder="Search by ID, Name or Department">
+                <br>
+                <button type="submit" class="btn btn-primary">
+                    Search
+                </button>
+            </form>
+
             <table class="table table-bordered table-striped table-hover">
 
                 <thead class="table-dark">
@@ -32,6 +43,7 @@
                         <th>Joining Date</th>
                         <th>Salary</th>
                         <th>Bank Account</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
 
@@ -42,10 +54,20 @@
                     <tr>
 
                     {% for item in employee %}
-
                         <td>{{ item }}</td>
-
                     {% endfor %}
+
+                    <td>
+                        <a href="/update_employee/{{ employee[0] }}"
+                           class="btn btn-warning btn-sm">
+                           Edit
+                        </a>
+
+                        <a href="/delete_employee/{{ employee[0] }}"
+                           class="btn btn-danger btn-sm">
+                           Delete
+                        </a>
+                    </td>
 
                     </tr>
 
@@ -60,8 +82,6 @@
     </div>
 
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

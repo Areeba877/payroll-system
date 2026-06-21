@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department Salary Report</title>
+</head>
+<body>
+
+<h2>Department Salary Report</h2>
+
+<table border="1">
+
+<tr>
+    <th>Department</th>
+    <th>Total Employees</th>
+    <th>Total Payroll</th>
+</tr>
+
+{% for row in records %}
+<tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

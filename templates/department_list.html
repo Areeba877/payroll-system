@@ -12,18 +12,36 @@
 
     <table class="table table-bordered table-striped">
 
-        <tr>
-            <th>ID</th>
-            <th>Department Name</th>
-        </tr>
+       <tr>
+           <th>ID</th>
+           <th>Department Name</th>
+           <th>Actions</th>
+       </tr>
 
-        {% for department in departments %}
-        <tr>
-            {% for item in department %}
-            <td>{{ item }}</td>
-            {% endfor %}
-        </tr>
-        {% endfor %}
+       {% for department in departments %}
+       <tr>
+
+           <td>{{ department[0] }}</td>
+           <td>{{ department[1] }}</td>
+
+           <td>
+
+               <a href="/update_department/{{ department[0] }}"
+                  class="btn btn-warning btn-sm">
+                  Edit
+           </a>
+
+        <a href="/delete_department/{{ department[0] }}"
+           class="btn btn-danger btn-sm">
+           Delete
+        </a>
+
+    </td>
+
+</tr>
+{% endfor %}
+
+       
 
     </table>
 

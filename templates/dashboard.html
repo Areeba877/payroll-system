@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <h2>Welcome {{ username }}</h2>
+
+            <h5>Your Role: {{ role }}</h5>
+
+            <hr>
+
+            <a href="/employees" class="btn btn-success">
+                Employee Management
+            </a>
+
+            <a href="/payroll" class="btn btn-warning">
+                Payroll
+            </a>
+
+            <a href="/reports" class="btn btn-info">
+                Reports
+            </a>
+
+            <a href="/logout" class="btn btn-danger">
+                Logout
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
